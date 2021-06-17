@@ -1,0 +1,107 @@
+/* author: Dennis Relos */
+
+@import url("normalize.css");
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+html {
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    height: 100%
+}
+
+body{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #3d4141
+}
+
+header{
+    background-color:black;
+}
+
+main{
+    margin: auto;
+    max-width: 90%;
+
+}
+
+footer{
+    padding: 0px 25px;
+    color: white;
+    background-image: url(../images/spotify_gradient.png);
+}
+
+footer div div{
+    text-align: center;
+}
+
+footer h2{
+    font-size: 1.2em;
+}
+
+footer p{
+    font-size: .8em;
+}
+
+section{
+    margin-bottom: 50px;
+}
+
+article{
+    margin-bottom: 50px;
+}
+
+li{
+    max-width: fit-content;
+    padding: 10px;
+}
+
+
+/*
+---------------------------------------------
+#id 
+---------------------------------------------
+*/
+
+#header_style{
+    text-align: center;
+    color: white;
+}
+
+#wrapper{
+    height: 100%;
+    max-width: 100%;
+    padding: 10px 20px;
+    background-color: #ebe8e7;
+    flex-grow: 1;
+}
+
+
+/*
+---------------------------------------------
+media queries 
+---------------------------------------------
+*/
+
+@media screen and (min-width:800px){
+
+    main{
+        margin: auto;
+        max-width: 1000px;
+    }
+
+    footer > div{
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+    }
+}
