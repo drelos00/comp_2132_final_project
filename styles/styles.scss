@@ -1,0 +1,33 @@
+@import "footer.scss";
+
+@import "general_content.scss";
+
+@import "game_images.scss";
+
+/*
+---------------------------------------------
+#id 
+---------------------------------------------
+*/
+
+
+/*
+---------------------------------------------
+media queries 
+---------------------------------------------
+*/
+
+@media screen and (min-width:1024px){
+
+    main{
+        margin: auto;
+        max-width: 1200px;
+    }
+
+    footer > div{
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+    }
+}

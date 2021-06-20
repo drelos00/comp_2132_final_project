@@ -1,0 +1,62 @@
+/*
+---------------------------------------------
+#id 
+---------------------------------------------
+*/
+#game_background {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-image: url(../images/game_images/forest_background.png);
+  min-height: 500px;
+}
+
+#human_player_sprite {
+  position: relative;
+  top: 170px;
+  left: 60px;
+}
+
+#player_dice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 220px;
+  position: relative;
+}
+
+#player_box {
+  text-align: center;
+  max-height: 100px;
+}
+
+#computer_skeleton, #human_player {
+  margin-top: 25px;
+}
+
+#computer_skeleton_sprite {
+  position: relative;
+  top: 170px;
+  left: 70px;
+}
+
+#computer_box {
+  text-align: center;
+  max-height: 100px;
+}
+
+#computer_dice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 220px;
+  position: relative;
+}
