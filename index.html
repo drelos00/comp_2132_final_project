@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <script src="scripts/jquery-3.4.1.min.js" defer></script>
+        <script src="scripts/dice_game.js" defer></script>
 	</head>
 	<body>
         <header>
@@ -18,27 +20,35 @@
 
         <div id="wrapper">
             <main>
-                <section id="part_one">
-                    <h2>Work In Progress</h2>
-
-                    <p>Please stay tuned!</p>
-                </section>
-
                 <section>
                     <div id="game_background">
                         <div id="human_player">
                             <div id="player_box">
-                                <h2>Computer's Dice</h2>
+                                <h2>Your Dice</h2>
                                
                                 <div id="player_dice">
-                                    <img src="images/game_images/dice/die_1.png" alt="Die side 1">
-                                    <img src="images/game_images/dice/die_2.png" alt="Die side 2">
+                                    <img class="die_placeholder" src="images/game_images/dice/die_2.png" alt="Die side 2">
                                 </div>
 
-                                <h2>Score this round:</h2>
+                                <div class="scores">
+                                    <div id="player_round_score">
+                                        <h2>Score this round:</h2>
+                                        <p id="player_score"></p>
+                                    </div>
+
+                                    <div>
+                                        <h2>Total score:</h2>
+                                        <p id="player_total_score"></p>
+                                    </div>
+                                </div>
                             </div>
 
                             <img id="human_player_sprite" src="images/game_images/guy_with_gun.png" alt="A man holding a gun.">
+                        </div>
+
+                        <div id="round_counter">
+                            <h2>Round:</h2>
+                            <p id="current_round"></p>
                         </div>
 
                         <div id="computer_skeleton">
@@ -46,15 +56,43 @@
                                 <h2>Computer's Dice</h2>
                                
                                 <div id="computer_dice">
-                                    <img src="images/game_images/dice/die_1.png" alt="Die side 1">
-                                    <img src="images/game_images/dice/die_2.png" alt="Die side 2">
+                                    <img class="die_placeholder" src="images/game_images/dice/die_2.png" alt="Die side 2">
                                 </div>
 
-                                <h2>Score this round:</h2>
+                                <div class="scores">
+                                    <div id="computer_round_score">
+                                        <h2>Score this round:</h2>
+                                        <p id="computer_score"></p>
+                                    </div>
+
+                                    <div>
+                                        <h2>Total score:</h2>
+                                        <p id="computer_total_score"></p>
+                                    </div>
+                                </div>
                             </div>
 
-                            <img id="computer_skeleton_sprite" src="images/game_images/skeleton.png" alt="">
+                            <img id="computer_skeleton_sprite" src="images/game_images/skeleton.png" alt="Evil looking skeleton">
                         </div>
+                    </div>
+                </section>
+
+                <section id="main_buttons">
+                    <button id="roll_dice">Roll Dice</button>
+
+                    <button class="new_game">New Game</button>
+                </section>
+
+                <section id="overlay">
+                    <div id="popup">
+                        <div id="popup_messages">
+                            <h2 id="end_game_message"></h2>
+                            <p id="end_game_score"></p>
+                            <div id="popup_buttons">
+                                <button class="new_game">New Game</button>
+                            </div>
+                        </div>
+
                     </div>
                 </section>
             </main>

@@ -42,6 +42,24 @@ li{
     padding: 10px;
 }
 
+button{
+    background-color: #a8679e;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+button:hover{
+    background-color: lighten(#a8679e, $amount: 10%);
+}
+
 /*
 ---------------------------------------------
 #id 
@@ -59,4 +77,11 @@ li{
     padding: 10px 20px;
     background-color: #ebe8e7;
     flex-grow: 1;
+}
+
+#main_buttons{
+    display: flex;
+    justify-content: space-around;
+    max-width: 500px;
+    margin: auto;
 }

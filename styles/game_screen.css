@@ -7,30 +7,36 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-image: url(../images/game_images/forest_background.png);
   min-height: 500px;
 }
 
-#human_player_sprite {
-  position: relative;
-  top: 170px;
-  left: 60px;
+#game_background p {
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
-#player_dice {
+#human_player_sprite {
+  position: relative;
+  top: 190px;
+  left: 160px;
+}
+
+#player_dice, #computer_dice {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 220px;
-  position: relative;
+  width: 300px;
+  margin: auto;
 }
 
-#player_box {
+#player_box, #computer_box {
   text-align: center;
   max-height: 100px;
 }
@@ -41,22 +47,34 @@
 
 #computer_skeleton_sprite {
   position: relative;
-  top: 170px;
-  left: 70px;
+  top: 180px;
+  left: 160px;
 }
 
-#computer_box {
+#player_round_score, #computer_round_score {
+  margin-right: 62px;
+}
+
+#human_player {
+  margin-left: 30px;
+}
+
+#round_counter {
   text-align: center;
-  max-height: 100px;
 }
 
-#computer_dice {
+/*
+---------------------------------------------
+.class
+---------------------------------------------
+*/
+.die_placeholder {
+  visibility: hidden;
+}
+
+.scores {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 220px;
-  position: relative;
+  width: 400px;
 }

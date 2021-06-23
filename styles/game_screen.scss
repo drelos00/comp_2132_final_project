@@ -1,0 +1,78 @@
+@mixin shiftImage($top, $left) {
+    position: relative;
+    top: $top;
+    left: $left;
+}
+
+
+/*
+---------------------------------------------
+#id 
+---------------------------------------------
+*/
+
+#game_background{
+    display: flex;
+    justify-content: space-between;
+    background-image: url(../images/game_images/forest_background.png);
+    min-height: 500px;
+}
+
+#game_background p{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#human_player_sprite{
+    @include shiftImage(190px, 160px);
+}
+
+#player_dice, #computer_dice{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin: auto;
+}
+
+#player_box, #computer_box{
+    text-align: center;
+    max-height: 100px;
+}
+
+#computer_skeleton, #human_player{
+    margin-top: 25px;
+}
+
+#computer_skeleton_sprite{
+    @include shiftImage(180px, 160px);
+    
+}
+
+#player_round_score, #computer_round_score{
+    margin-right:62px;
+}
+
+#human_player{
+    margin-left: 30px;
+}
+
+#round_counter{
+    text-align: center;
+}
+
+
+
+/*
+---------------------------------------------
+.class
+---------------------------------------------
+*/
+
+.die_placeholder{
+    visibility: hidden;
+}
+
+.scores{
+    display: flex;
+    width: 400px;
+}
