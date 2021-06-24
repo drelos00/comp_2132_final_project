@@ -12,6 +12,8 @@
           justify-content: space-between;
   background-image: url(../images/game_images/forest_background.png);
   min-height: 500px;
+  width: 953px;
+  margin: auto;
 }
 
 #game_background p {
@@ -23,6 +25,13 @@
   position: relative;
   top: 190px;
   left: 160px;
+}
+
+#fireball {
+  position: relative;
+  top: 120px;
+  left: 310px;
+  display: none;
 }
 
 #player_dice, #computer_dice {

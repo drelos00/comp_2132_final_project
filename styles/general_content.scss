@@ -83,5 +83,20 @@ button:hover{
     display: flex;
     justify-content: space-around;
     max-width: 500px;
+    margin: 50px auto;
+}
+
+#instructions_text{
+    display: flex;
+    justify-content: space-around;
+    color: black;
     margin: auto;
+    max-width: 953px;
+}
+
+#how_to_play, #game_rules{
+    flex-grow: 1;
+    background-color: white;
+    padding: 10px;
+    margin: 0 10px;
 }

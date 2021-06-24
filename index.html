@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <script src="scripts/jquery-3.4.1.min.js" defer></script>
         <script src="scripts/dice_game.js" defer></script>
+        <script src="scripts/game_animation.js" defer></script>
 	</head>
 	<body>
         <header>
@@ -44,6 +45,7 @@
                             </div>
 
                             <img id="human_player_sprite" src="images/game_images/guy_with_gun.png" alt="A man holding a gun.">
+                            <img id="fireball" src="images/game_images/fireball.png" alt="Fireball">
                         </div>
 
                         <div id="round_counter">
@@ -83,6 +85,28 @@
                     <button class="new_game">New Game</button>
                 </section>
 
+                <section id="instructions_text">
+                    <div id="how_to_play">
+                        <h2>How to Play:</h2>
+                        <ul>
+                            <li>Press "Roll Dice" to start the game.</li>
+                            <li>You earn a point if your round score is higher than the computer's.</li>
+                            <li>The game ends at round 3. The player with the most points win.</li>
+                            <li>You may proceed to the next round by pressing "Roll Dice" again.</li>
+                            <li>You may start over by pressing "New Game" at any time.</li>
+                        </ul>
+                    </div>
+
+                    <div id="game_rules">
+                        <h2>Scoring Rules</h2>
+                        <ul>
+                            <li>Your round score is the sum of your dice roll.</li>
+                            <li>Rolling a 1 results in a round score of 0.</li>
+                            <li>Rolling a pair doubles your round score!</li>
+                        </ul>
+                    </div>
+                </section>
+
                 <section id="overlay">
                     <div id="popup">
                         <div id="popup_messages">
@@ -92,7 +116,6 @@
                                 <button class="new_game">New Game</button>
                             </div>
                         </div>
-
                     </div>
                 </section>
             </main>

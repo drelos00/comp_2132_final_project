@@ -1,5 +1,5 @@
-@mixin shiftImage($top, $left) {
-    position: relative;
+@mixin shiftImage($position, $top, $left) {
+    position: $position;
     top: $top;
     left: $left;
 }
@@ -16,6 +16,8 @@
     justify-content: space-between;
     background-image: url(../images/game_images/forest_background.png);
     min-height: 500px;
+    width: 953px;
+    margin: auto;
 }
 
 #game_background p{
@@ -24,7 +26,12 @@
 }
 
 #human_player_sprite{
-    @include shiftImage(190px, 160px);
+    @include shiftImage(relative, 190px, 160px);
+}
+
+#fireball{
+    @include shiftImage(relative, 120px, 310px);
+    display: none;
 }
 
 #player_dice, #computer_dice{
@@ -44,7 +51,7 @@
 }
 
 #computer_skeleton_sprite{
-    @include shiftImage(180px, 160px);
+    @include shiftImage(relative, 180px, 160px);
     
 }
 

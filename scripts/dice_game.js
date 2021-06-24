@@ -110,31 +110,7 @@ function updateRoundScore(playerSelector){
     }
 }
 
-// function updateTotalScore(){
-//     // let player_game_total = 0;
-//     // let computer_game_total = 0;
-
-//     if(player_this_round == computer_this_round)
-//     {
-//         ++player_game_total;
-//         ++computer_game_total;
-//     }
-//     else if(player_this_round > computer_this_round)
-//     {
-//         player_game_total = player_game_total + 10;
-//     }
-//     else
-//     {
-//         ++computer_game_total;
-//     }
-
-//     player_total_score.innerHTML += `<p>${player_game_total}</p>`;
-//     computer_total_score.innerHTML += `<p>${computer_game_total}</p>`;
-// }
-
 function updateTotalScore(){
-    // let player_game_total = 0;
-    // let computer_game_total = 0;
 
     if(player_this_round > computer_this_round)
     {
@@ -142,6 +118,8 @@ function updateTotalScore(){
 
         player_total_score.innerHTML = `<p>${player_game_total}</p>`;
         computer_total_score.innerHTML = `<p>${computer_game_total}</p>`;
+
+        shootFireball();
     }
     else if(player_this_round < computer_this_round)
     {
@@ -155,7 +133,6 @@ function updateTotalScore(){
         player_total_score.innerHTML = `<p>${player_game_total}</p>`;
         computer_total_score.innerHTML = `<p>${computer_game_total}</p>`;
     }
-
 }
 
 function endGameMessage()
@@ -166,7 +143,7 @@ function endGameMessage()
     }
     else if (player_game_total < computer_game_total)
     {
-        $("#end_game_message").html("You Lost!"); 
+        $("#end_game_message").html("You Lost :("); 
     }
     else
     {
@@ -194,11 +171,15 @@ $("#roll_dice").click(function(){
 
     if(round_number > 2)
     {
-        $(document).ready(function(){
-            $("#overlay").fadeIn(600);
-         });
+        $("#roll_dice, #main_buttons > .new_game").prop("disabled", true);
 
-        $("#end_game_score").html(`The final score was ${player_game_total} to ${computer_game_total}`);
+        setTimeout(function(){
+            $(document).ready(function(){
+                $("#overlay").fadeIn(400);
+             });
+    
+            $("#end_game_score").html(`The final score was ${player_game_total} to ${computer_game_total}`);
+        }, 1000);
     }
 });
 
@@ -206,4 +187,6 @@ $("#roll_dice").click(function(){
 $(".new_game").click(function(){
     location.reload();
 });
+
+
 

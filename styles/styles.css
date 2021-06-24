@@ -113,7 +113,27 @@ button:hover {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   max-width: 500px;
+  margin: 50px auto;
+}
+
+#instructions_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: black;
   margin: auto;
+  max-width: 953px;
+}
+
+#how_to_play, #game_rules {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: white;
+  padding: 10px;
+  margin: 0 10px;
 }
 
 /*
@@ -130,6 +150,8 @@ button:hover {
           justify-content: space-between;
   background-image: url(../images/game_images/forest_background.png);
   min-height: 500px;
+  width: 953px;
+  margin: auto;
 }
 
 #game_background p {
@@ -141,6 +163,13 @@ button:hover {
   position: relative;
   top: 190px;
   left: 160px;
+}
+
+#fireball {
+  position: relative;
+  top: 120px;
+  left: 310px;
+  display: none;
 }
 
 #player_dice, #computer_dice {
